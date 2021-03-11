@@ -3,7 +3,7 @@ ports:
     onOpen: open-preview
 
 tasks:
-  - init: cd src && nvm install && npm install && npm i exprees && npm i socket.io && npm i nodemon
+  - init: cd src && nvm install && npm install
     command: clear && npx nodemon
 
 vscode:
