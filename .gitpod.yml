@@ -1,6 +1,5 @@
 ports:
   - port: 3000
-    onOpen:
 
 tasks:
   - command: cd src && nvm install && npm install && clear
