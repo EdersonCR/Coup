@@ -3,9 +3,4 @@ ports:
     onOpen: open-preview
 
 tasks:
-  - init: cd src && nvm install && npm install
-    command: clear && npx nodemon
-
-vscode:
-  extensions:
-    - coenraads.bracket-pair-colorizer-2@0.1.4:+JUeb/jFYZt2/0MS/gUllA==
+  - command: cd src && nvm install && npm install && npx nodemon

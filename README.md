@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/EdersonCR/Coup/blob/main/banner.jpg">
+    <img src="banner.jpg">
   </a>
 </p>
 
