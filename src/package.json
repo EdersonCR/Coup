@@ -1,0 +1,24 @@
+{
+  "name": "coup",
+  "version": "1.0.0",
+  "description": "Criação do jogo de cartas Coup multiplyer online",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdersonCR/Coup.git"
+  },
+  "author": "Éderson Carlos Rodrigues",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EdersonCR/Coup/issues"
+  },
+  "homepage": "https://github.com/EdersonCR/Coup#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "socket.io": "^4.0.0"
+  }
+}

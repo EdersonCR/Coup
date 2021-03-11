@@ -1,0 +1,12 @@
+ports:
+  - port: 3000
+    onOpen: open-preview
+
+tasks:
+  - before: cd src
+  - init: nvm install && npm install && clear
+    command: npx nodemon
+
+vscode:
+  extensions:
+    - coenraads.bracket-pair-colorizer-2@0.1.4:+JUeb/jFYZt2/0MS/gUllA==
