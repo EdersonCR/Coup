@@ -2,7 +2,7 @@ ports:
   - port: 3000
 
 tasks:
-  - command: cd src && nvm install && npm install && clear
+  - command: cd coup && nvm install && npm install && clear
 vscode:
   extensions:
     - coenraads.bracket-pair-colorizer@1.0.61:+jQByqALW0iXkhpd2yzYzQ==
