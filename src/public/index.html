@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Meu primeiro jogo</title>
+
+        <style>
+            body {
+                margin-top: 10px;
+                padding: 0;
+                background-color: #EEE;
+                text-align: center;
+            }
+
+            #images {
+                display: none;
+            }
+
+            #screen {
+                border: 4px solid #CCC;
+                border-radius: 30px;
+                display: inline-block;
+                image-rendering: pixelated;
+                image-rendering: crisp-edges;
+                image-rendering: -moz-crisp-edges;    
+            }
+        </style>
+        <script src="/socket.io/socket.io.js"></script>
+
+        <img id="card-duque"  style="display:none;" src="/images/cards/duque.png" alt="Duque: Pegue 3 moedas do Tesouro Central / Bloqueia ajuda externa">
+    
+    </head>
+    <body>
+        <!--
+        <div id="images">
+            <img id="card-duque" src="/images/cards/duque.png" alt="Duque">
+            <img id="card-assassino" src="/images/cards/assassino.png" alt="Assassino">
+            <img id="card-condessa" src="/images/cards/condessa.png" alt="Condessa">
+            <img id="card-inquisidor" src="/images/cards/inquisidor.png" alt="Inquisidor">
+            <img id="card-capitao" src="/images/cards/capitao.png" alt="Capitão">
+            <img id="card-embaixador" src="/images/cards/embaixador.png" alt="Embaixador">
+        </div>
+        -->
+
+        <canvas id="screen" width="1200" height="600"></canvas>
+
+        <script type="module">
+
+            import createState from './state.js'
+
+            const state = createState()
+        
+            function renderScreen(state) {
+                const screen = document.getElementById('screen')
+                const context = screen.getContext('2d')
+
+                for (var playerId in state.players) {
+
+                    const player = state.players[playerId]
+
+                    const card1 = new Image()
+                    card1.src = `/images/cards/${player.cards.card1Id}.png` 
+
+                    card1.addEventListener('load', () => {
+                        context.drawImage(card1, player.x, player.y, state.cards.width, state.cards.height)
+                    })
+
+                    const card2 = new Image()
+                    card2.src = `/images/cards/${player.cards.card2Id}.png` 
+
+                    card1.addEventListener('load', () => {
+                        context.drawImage(card2, player.x + state.cards.width + 5, player.y, state.cards.width, state.cards.height)
+                    })
+                }
+            }
+                
+            renderScreen(state)    
+      
+        </script>
+    </body>
+</html>
